@@ -191,7 +191,7 @@ version_variable = "src/dmcview/__init__.py:__version__"
 #*********************************************************************
 # mypy configuration moved from mypy.ini to pyproject.toml
 # config file doc:https://mypy.readthedocs.io/en/stable/config_file.html
-# $ mypy ./src/maisnpackage
+# $ mypy ./src/mainpackage
 #**********************************************************************
 [tool.mypy]
 # Global options:
@@ -221,6 +221,7 @@ testpaths = ["tests"]
 # Test Coverage configuration moved from .coveragerc to pyproject.toml
 # config file doc:https://coverage.readthedocs.io/en/7.15.4/config.html
 #**********************************************************************
+# $ coverage run -m pytest
 [tool.coverage.run]
 source = ["dmcview"]
 parallel = true
