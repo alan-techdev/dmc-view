@@ -189,6 +189,22 @@ ignore = [
 version_variable = "src/dmcview/__init__.py:__version__"
 
 #*********************************************************************
+# mypy configuration moved from mypy.ini to pyproject.toml
+# config file doc:https://mypy.readthedocs.io/en/stable/config_file.html
+# $ mypy ./src/maisnpackage
+#**********************************************************************
+[tool.mypy]
+# Global options:
+warn_return_any = true
+warn_unused_configs = true
+
+# mypy per-module options:
+[[tool.mypy.overrides]]
+module = "dmcview.*"
+disallow_untyped_defs = true
+
+
+#*********************************************************************
 # Pytest configuration moved from pytest.ini to pyproject.toml
 # config file doc:https://docs.pytest.org/en/stable/reference/customize.html
 # QT fixture see https://pytest-qt.readthedocs.io/en/latest/intro.html
