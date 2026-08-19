@@ -187,3 +187,46 @@ ignore = [
 # we need to update in toml file above  and below also
 [tool.software-release]
 version_variable = "src/dmcview/__init__.py:__version__"
+
+#*********************************************************************
+# Pytest configuration moved from pytest.ini to pyproject.toml
+# config file doc:https://docs.pytest.org/en/stable/reference/customize.html
+# QT fixture see https://pytest-qt.readthedocs.io/en/latest/intro.html
+#**********************************************************************#
+[tool.pytest]
+minversion = "9.0"
+addopts = ["--strict-markers"]
+pythonpath=["src"]
+testpaths = ["tests"]
+#required_plugins=["pytest-qt"]
+
+
+#*********************************************************************
+# Test Coverage configuration moved from .coveragerc to pyproject.toml
+# config file doc:https://coverage.readthedocs.io/en/7.15.4/config.html
+#**********************************************************************
+[tool.coverage.run]
+source = ["dmcview"]
+parallel = true
+# branch is the if else statement 
+branch = true
+
+[tool.coverage.report]
+fail_under=30 # threshold for test coverage, if below this number the test will fail
+skip_covered = false
+show_missing = true
+precision = 2
+omit = [    
+    "tests/*",
+    "*/__init__.py"
+]
+
+exclude_lines = [
+    "raise NotImplementedError",
+    "raise NotImplemented"
+]
+ignore_errors = false
+
+
+[tool.coverage.html]
+directory = "coverage_html_report"
