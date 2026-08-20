@@ -16,8 +16,8 @@ maintainers = [{name="Iso"}, {name="Alan"}] # must be an object
 license = "AGPL-3.0-only"
 readme = {file = "README.rst", content-type = "text/x-rst"}
 
-homepage = "https://github.com/Issamricin/dmc-view"
-repository = "https://github.com/Issamricin/dmc-view"
+homepage = "https://github.com/iso-techdev/dmc-view"
+repository = "https://github.com/iso-techdev/dmc-view"
 documentation = "https://dmc-view.readthedocs.io/"
 
 keywords = [
@@ -48,12 +48,12 @@ classifiers = [
 
 
 # PyPi url links, that appear in 'Project Links' section
-urls."Bug Tracker" = "https://github.com/Issamricin/dmc-view/issues"
-urls."CI: Github Actions" = "https://github.com/Issamricin/dmc-view/actions"
+urls."Bug Tracker" = "https://github.com/iso-techdev/dmc-view/issues"
+urls."CI: Github Actions" = "https://github.com/iso-techdev/dmc-view/actions"
 urls.Documentation = "https://dmc-view.readthedocs.io/"
-urls."Source Code" = "https://github.com/Issamricin/dmc-view"
-urls.Changelog = "https://github.com/Issamricin/dmc-view/blob/master/CHANGELOG.rst"
-urls."Code of Conduct" = "https://github.com/Issamricin/dmc-view/blob/master/CONTRIBUTING.md"
+urls."Source Code" = "https://github.com/iso-techdev/dmc-view"
+urls.Changelog = "https://github.com/iso-techdev/dmc-view/blob/master/CHANGELOG.rst"
+urls."Code of Conduct" = "https://github.com/iso-techdev/dmc-view/blob/master/CONTRIBUTING.md"
 
 
 
