@@ -137,32 +137,15 @@ dmcview = 'dmcview.cli:main'
 # CONFIG PLACE
 ##############
 
-# see https://black.readthedocs.io/en/stable/  code format with max line 95
-[tool.black]
-line-length = 95
-include = '\.pyi?$'
-extend-exclude = '''
-'''
-
-# see https://pycqa.github.io/isort/index.html arrange the import in right order 
-[tool.isort]
-profile = 'black'
-
-# see https://bandit.readthedocs.io/en/latest/  check for security volubility
-#  Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
-#  Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-[tool.bandit]
-tests = []
-skips = [
-    "B101", # This plugin test checks for the use of the Python assert keyword. https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
-    "B311"  # https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html
-]
-
-# RUFF covers the above so repeat is done again in one place
-# Linting and formatting with Ruff
-# see https://docs.astral.sh/ruff/configuration/
+# RUFF is a fast Python linter, written in Rust. 
+#It can be used as a replacement for Flake8, Pyflakes, pycodestyle, and other linters. 
+#It also includes some additional checks and features that are not available in those tools.
+# https://docs.astral.sh/ruff/configuration/
+# $ ruff check
 [tool.ruff]
-#target-version = "py312"
+target-version = "py310" 
+src = ["src/dmcview", "tests"]
+exclude = ["docs/", "scripts"]
 
 [tool.ruff.lint]
 select = [
@@ -181,6 +164,18 @@ ignore = [
     "W191",  # indentation contains tabs
     "B904",  # Allow raising exceptions without from e, for HTTPException
 ]
+
+
+[tool.ruff.lint.isort]
+known-first-party = ["dmcview"]
+
+[tool.ruff.format]
+# Use black-compatible formatting
+quote-style = "double"
+indent-style = "space"
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
 
 
 # see scripts/parse_version.py 
