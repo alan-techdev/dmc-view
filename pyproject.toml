@@ -7,13 +7,13 @@ build-backend = "poetry.core.masonry.api"
 [project]
 name = "dmc-view"
 version = "0.3.3"
-description = "Digital Magnatic Compass View"
+description = "Digital Magnetic Compass View"
 authors = [
    {name="Iso"}, 
    {name="Alan"}
 ]
 maintainers = [{name="Iso"}, {name="Alan"}] # must be an object
-license = "AGPL-3.0-only"
+license = {text = "AGPL-3.0-only"}
 readme = {file = "README.rst", content-type = "text/x-rst"}
 
 homepage = "https://github.com/iso-techdev/dmc-view"
@@ -21,12 +21,12 @@ repository = "https://github.com/iso-techdev/dmc-view"
 documentation = "https://dmc-view.readthedocs.io/"
 
 keywords = [
-    "digital magnatic view", "dmc",
+    "digital magnetic view", "dmc",
 ]
 
-requires-python = "<3.14,>=3.9"
+requires-python = ">=3.10"
 
-# Troves classifer see https://pypi.org/classifiers/
+# Troves classifier see https://pypi.org/classifiers/
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Manufacturing",
