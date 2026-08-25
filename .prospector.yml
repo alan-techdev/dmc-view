@@ -1,5 +1,7 @@
 # output-format: json
+# Python static analysis tool configuration file for Prospector
 # see https://prospector.landscape.io/en/master/
+# $ prospector
 
 strictness: high
 test-warnings: true

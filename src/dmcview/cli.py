@@ -162,7 +162,7 @@ def main() -> None:
         default=None,
         metavar="[x,y,z]",
     )
-    parser.add_argument("--version", action="version", version=f"dmcview {__version__}")
+    parser.add_argument("--version", action="version", version=f"dmcview {__version__}") # this is build in parser to display the version of the package
     parser.add_argument("--author", action="store_true", help="Display author information")
     parser.add_argument("--report-bug", action="store_true", help="Library detail information to report a bug")
     parser.add_argument("--description", action="store_true", help="Display description of the package")

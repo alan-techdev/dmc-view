@@ -1,3 +1,5 @@
+#https://docs.codacy.com/
+# Code quality analysis tool configuration file for Codacy
 engines:
   pylint:
     enabled: true
