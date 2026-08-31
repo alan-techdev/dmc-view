@@ -178,11 +178,6 @@ indent-style = "space"
 convention = "google"
 
 
-# see scripts/parse_version.py 
-# we need to update in toml file above  and below also
-[tool.software-release]
-version_variable = "src/dmcview/__init__.py:__version__"
-
 #*********************************************************************
 # mypy configuration moved from mypy.ini to pyproject.toml
 # config file doc:https://mypy.readthedocs.io/en/stable/config_file.html
