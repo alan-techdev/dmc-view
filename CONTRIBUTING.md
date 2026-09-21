@@ -120,6 +120,42 @@ You report will be placed to `htmlcov` directory. Please do not include this dir
 
 ## Contributor Guidelines
 
+### CI/CD check 
+below are the command to use to make sure your CI/CD is green
+```bash
+# static dependency check
+ tox -v -s false -e pin-deps
+
+#Do Type Checking
+tox -e type -v -s false
+
+# Test Suite Against Wheel
+tox -e wheel-test -s false
+
+# Combine Coverage (dev, sdist, wheel) & make Reports
+tox -e coverage --sitepackages -v -s false
+
+# Ruff check 
+tox -e check -v -s false
+
+# Static type Checking Dependencies
+tox -s false -e pin-deps 
+
+# Test suite 
+ tox -v -s false | tee test_output.log
+
+```
+
+8. Commit your changes and push your branch to GitHub:
+
+```bash
+git add .
+git commit . -m "Your detailed description of your changes."
+git push origin name-of-your-bugfix-or-feature
+```
+
+9. Submit a pull request through the GitHub website.
+
 ### Pull Request Guidelines
 
 Before you submit a pull request, check that it meets these guidelines:
