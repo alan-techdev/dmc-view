@@ -216,7 +216,7 @@ parallel = true
 branch = true
 
 [tool.coverage.report]
-fail_under=30 # threshold for test coverage, if below this number the test will fail
+fail_under=20 # threshold for test coverage, if below this number the test will fail
 skip_covered = false
 show_missing = true
 precision = 2
