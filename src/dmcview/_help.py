@@ -14,7 +14,7 @@ from . import __version__ as dmcview_version
 
 
 
-def _implementation():
+def _implementation()-> dict[str, str]:
     """Return a dict with the Python implementation and version.
 
     Provide both the name and the version of the Python implementation
@@ -77,7 +77,7 @@ def info() -> dict[str, Any]:
     }
 
 
-def bug_reporting():
+def bug_reporting()->None:
     """Pretty-print the bug information as JSON."""
     print(json.dumps(info(), sort_keys=True, indent=2))
 
